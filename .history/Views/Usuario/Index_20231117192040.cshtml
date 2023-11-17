@@ -21,8 +21,8 @@
             <tr>
                 <td>@usuario.Id</td>
                 <td>@usuario.NombreDeUsuario</td>
-               <td><a asp-asp-controller ="Usuario" asp-action="ModificarUsuario" asp-route-idUsuario="@usuario.Id">Modificar</a></td>
-                <td><a asp-asp-controller ="Usuario" asp-action="EliminarUsuario" asp-route-idUsuario="@usuario.Id" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a></td>
+               <td><a asp-asp-controller ="Usuario" asp-action="ModificarUsuario" asp-route-idTablero="@usuario.Id">Modificar</a></td>
+                <td><a asp-asp-controller ="Usuario" asp-action="EliminarTablero" asp-route-idTablero="@usuario.Id" onclick="return confirm('¿Estás seguro de eliminar este tablero?')">Eliminar</a></td>
             </tr>
         }
     </tbody>

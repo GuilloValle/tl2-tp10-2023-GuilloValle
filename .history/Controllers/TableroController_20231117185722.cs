@@ -42,10 +42,10 @@ public class TableroController : Controller
     }
 
     [HttpGet]
-    public IActionResult ModificarTablero(int idTablero)
+    public IActionResult ModificarTablero(int id)
     {   
         var Tableros = tableroRepository.GetAllTableros();
-        var TableroAMod = Tableros.FirstOrDefault(tabl => tabl.Id == idTablero); 
+        var TableroAMod = Tableros.FirstOrDefault(tabl => tabl.Id == id); 
         return View(TableroAMod);
     }
 

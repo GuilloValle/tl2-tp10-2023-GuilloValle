@@ -25,7 +25,7 @@
                 <td>@tablero.Descripcion</td>
                 <td>@tablero.Id_propietario</td>
                 <td><a asp-asp-controller ="Tablero" asp-action="ModificarTablero" asp-route-idTablero="@tablero.Id">Modificar</a></td>
-                <td><a asp-asp-controller ="Tablero" asp-action="EliminarTablero" asp-route-idTablero="@tablero.Id" onclick="return confirm('¿Estás seguro de eliminar este tablero?')">Eliminar</a></td>
+                <td><a asp-action="EliminarTablero" asp-route-idTablero="@tablero.Id" onclick="return confirm('¿Estás seguro de eliminar este tablero?')">Eliminar</a></td>
             </tr>
         }
     </tbody>
