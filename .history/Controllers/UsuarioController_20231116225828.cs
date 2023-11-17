@@ -55,12 +55,8 @@ public class UsuarioController : Controller
         usuarioRepository.ModificarUsuario(id,usuarioNuevo);
         return RedirectToAction("Index");
     }
-    
-    public IActionResult EliminarUsuario(int idUsuario)
-    {
-        usuarioRepository.EliminarUsuario(idUsuario);
-        return RedirectToAction("Index");
-    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

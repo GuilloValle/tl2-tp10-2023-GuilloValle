@@ -27,7 +27,7 @@ public class UsuarioController : Controller
         return View();
     }
 
-    [HttpGet]
+     [HttpGet]
     public IActionResult CrearUsuario()
     {   
         return View(new Usuario());
@@ -38,27 +38,6 @@ public class UsuarioController : Controller
     {   
         var Usuarios = usuarioRepository.GetAllUsuarios();
         usuarioRepository.CrearNuevoUsuario(usuario);
-        return RedirectToAction("Index");
-    }
-
-    [HttpGet]
-    public IActionResult ModificarUsuario(int id)
-    {   
-        var Usuarios = usuarioRepository.GetAllUsuarios();
-        var usuarioAMod = Usuarios.FirstOrDefault(usuario => usuario.Id == id); 
-        return View(usuarioAMod);
-    }
-
-    [HttpPost]
-    public IActionResult ModificarUsuario(int id,Usuario usuarioNuevo)
-    {   
-        usuarioRepository.ModificarUsuario(id,usuarioNuevo);
-        return RedirectToAction("Index");
-    }
-    
-    public IActionResult EliminarUsuario(int idUsuario)
-    {
-        usuarioRepository.EliminarUsuario(idUsuario);
         return RedirectToAction("Index");
     }
 

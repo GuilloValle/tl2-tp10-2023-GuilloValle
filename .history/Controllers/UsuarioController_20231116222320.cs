@@ -45,22 +45,19 @@ public class UsuarioController : Controller
     public IActionResult ModificarUsuario(int id)
     {   
         var Usuarios = usuarioRepository.GetAllUsuarios();
-        var usuarioAMod = Usuarios.FirstOrDefault(usuario => usuario.Id == id); 
+        var usuarioAMod = Usuarios.FirstOrDefault(usuario => usuario.Id == usuario.Id); 
         return View(usuarioAMod);
     }
 
     [HttpPost]
-    public IActionResult ModificarUsuario(int id,Usuario usuarioNuevo)
+    public IActionResult ModificarUsuario(Usuario usuarioNuevo)
     {   
-        usuarioRepository.ModificarUsuario(id,usuarioNuevo);
+        var Usuarios = usuarioRepository.GetAllUsuarios();
+        
         return RedirectToAction("Index");
     }
-    
-    public IActionResult EliminarUsuario(int idUsuario)
-    {
-        usuarioRepository.EliminarUsuario(idUsuario);
-        return RedirectToAction("Index");
-    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
