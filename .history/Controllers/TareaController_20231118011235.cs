@@ -49,15 +49,15 @@ public class TareaController : Controller
     }
 
     [HttpPost]
-    public IActionResult ModificarTarea(Tarea TareaNueva)
+    public IActionResult ModificarTarea(Usuario TareaNuevo)
     {   
-        tareaRepository.ModificarTarea(TareaNueva);
+        usuarioRepository.ModificarUsuario(id,usuarioNuevo);
         return RedirectToAction("Index");
     }
     
-    public IActionResult EliminarTarea(int idTarea)
+    public IActionResult EliminarTarea(int idUsuario)
     {
-        tareaRepository.EliminarTarea(idTarea);
+        usuarioRepository.EliminarUsuario(idUsuario);
         return RedirectToAction("Index");
     }
 

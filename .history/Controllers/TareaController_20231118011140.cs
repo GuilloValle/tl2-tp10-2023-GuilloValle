@@ -36,6 +36,7 @@ public class TareaController : Controller
     [HttpPost]
     public IActionResult CrearTarea(Tarea tarea)
     {   
+        var Tareas = tareaRepository.GetAllTareas();
         tareaRepository.CrearNuevaTarea(tarea);
         return RedirectToAction("Index");
     }
@@ -43,21 +44,21 @@ public class TareaController : Controller
     [HttpGet]
     public IActionResult ModificarTarea(int idTarea)
     {   
-        var Tareas = tareaRepository.GetAllTareas();
-        var TareaAMod = Tareas.FirstOrDefault(tarea => tarea.Id == idTarea); 
-        return View(TareaAMod);
+        var Usuarios = usuarioRepository.GetAllUsuarios();
+        var usuarioAMod = Usuarios.FirstOrDefault(usuario => usuario.Id == idUsuario); 
+        return View(usuarioAMod);
     }
 
     [HttpPost]
-    public IActionResult ModificarTarea(Tarea TareaNueva)
+    public IActionResult ModificarTarea(Usuario TareaNuevo)
     {   
-        tareaRepository.ModificarTarea(TareaNueva);
+        usuarioRepository.ModificarUsuario(id,usuarioNuevo);
         return RedirectToAction("Index");
     }
     
-    public IActionResult EliminarTarea(int idTarea)
+    public IActionResult EliminarTarea(int idUsuario)
     {
-        tareaRepository.EliminarTarea(idTarea);
+        usuarioRepository.EliminarUsuario(idUsuario);
         return RedirectToAction("Index");
     }
 

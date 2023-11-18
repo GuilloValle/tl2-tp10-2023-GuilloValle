@@ -30,8 +30,9 @@
                 <td>@tarea.Descripcion</td>
                 <td>@tarea.Color</td>
                 <td>@tarea.IdUsuarioAsingnado</td>
-                <td><a asp-asp-controller ="Tarea" asp-action="ModificarTarea" asp-route-idTarea="@tarea.Id">Modificar</a></td>
-                <td><a asp-asp-controller ="Tarea" asp-action="EliminarTarea" asp-route-idTarea="@tarea.Id" onclick="return confirm('¿Estás seguro de eliminar este tablero?')">Eliminar</a></td>
+                @*<td><a asp-asp-controller ="Tarea" asp-action="ModificarTarea" asp-route-idTablero="@tarea.Id">Modificar</a></td>
+                <td><a asp-asp-controller ="Tarea" asp-action="EliminarTarea" asp-route-idTablero="@tarea.Id" onclick="return confirm('¿Estás seguro de eliminar este tablero?')">Eliminar</a></td>
+                *@
             </tr>
         }
     </tbody>
