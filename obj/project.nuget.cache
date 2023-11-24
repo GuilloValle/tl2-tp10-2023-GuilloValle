@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tpiVMXxQ7oVmDk2QjMgzrjNQoX8mnwC+LQysOxa3UK06oCleYqoPh9sIzVp+1ECesBGYa7w3AowN8oRBLEAAIA==",
+  "dgSpecHash": "oFqa8ghzv8A747AwYkNlkLJEKjZK8D+DFRnOwDlt+NHdepURzSLMEd/q9FVMcYEfaJqAQokAjD/Z62lcWP8dXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Guillo\\Desktop\\taller2\\tl2-tp10-2023-GuilloValle\\tl2-tp10-2023-GuilloValle.csproj",
+  "projectFilePath": "C:\\Users\\Guillo\\Desktop\\taller2\\tl2-tp10-2023-GuilloValle-propio\\tl2-tp10-2023-GuilloValle.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Guillo\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Guillo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
